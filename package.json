@@ -1,0 +1,26 @@
+{
+  "name": "cafeshop",
+  "version": "1.0.0",
+  "description": "cafeshop",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnbyseven/cryptobroker.git"
+  },
+  "author": "giriraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/learnbyseven/cafeshop/issues"
+  },
+  "homepage": "https://github.com/learnbyseven/cafeshop#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.18.2",
+    "ip": "^1.1.8",
+    "os": "^0.1.2",
+    "path": "^0.12.7"
+  }
+}
