@@ -1,0 +1,29 @@
+
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag info:v1
+    - name: login to docker
+      uses: docker/login-action@v2
+      with: 
+        username: giriraj789
+        password: redhat@123
+    - name: push
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: giriraj789/cafeshop:v1
